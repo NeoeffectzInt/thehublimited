@@ -1,0 +1,793 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <title>The Hub</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/img/thl_logo.png' %}">
+</head>
+<body>
+    
+  <div id="loader-parent" class="loader-parent">
+      <div class="loader"></div>
+      <h4>Welcome</h4>
+  </div>
+  
+  
+  <div class="founders-about">
+    <div id="founders-about-close" class="founders-about-close">x</div>
+    <div class="about-card">
+        
+        <div class="ab-desc">
+            <span class="ceo-name">Terms & Conditions</span>
+            <span class="ceo-label">The Hub</span>
+            <span class="ceo-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, venenatis.</span>
+            
+        </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="main_nav">
+        <a class="logo" href="{% url 'home' %}">
+          <img src="{% static 'assets/img/the-hub-terminus.png' %}" alt="">
+          <p class="logo-text">
+            Worldwide Fulfilment<br>
+            Made Easy.
+          </p>
+        </a>
+        <a class="nav-links" href="{% url 'home' %}">
+            <span class="styler-bg"></span>
+            Home
+        </a>
+        <a class="nav-links how_works">
+            <span class="styler-bg"></span>
+            How It Works
+        </a>
+        <div class="nav-links">
+            <span class="styler-bg"></span>
+            <span class="nav-links-solution">Solutions <p class="carrat">+</p></span>
+            <img class="menu_triangle" src="{% static 'assets/img/triangle.png' %}" alt="">
+            <p class="sub_menu">
+                <a href="{% url 'solution1' %}" class="sub_menu_items">
+
+                    <img class="sub_menu_items_img" src="{% static 'assets/img/inventory-management.png' %}" alt="">
+                    <strong>Order Fulfilment &amp; Inventory Management</strong>
+                    
+                    Effective utilization of modern business operations to drive overall operational efficiency
+
+                </a>
+
+                <a href="{% url 'solution2' %}" class="sub_menu_items">
+
+                    <img class="sub_menu_items_img" src="{% static 'assets/img/distribution.png' %}" alt="">
+                    <strong>global product distribution</strong>
+                    Connecting products with people, one doorstep at a time
+                </a>
+
+                <a href="{% url 'solution3' %}" class="sub_menu_items">
+
+                    <img class="sub_menu_items_img" src="{% static 'assets/img/trolley.png' %}" alt="">
+                    <strong>flexible storage</strong>
+                    Adapting to your needs, one space at a time
+                </a>
+
+                <a href="{% url 'solution4' %}" class="sub_menu_items">
+
+                    <img class="sub_menu_items_img" src="{% static 'assets/img/consolidate.png' %}" alt="">
+                    <strong>consolidation</strong>
+                    Bringing it all together for greater efficiency.
+                </a>
+
+                <a href="{% url 'solution5' %}" style="border: none;" class="sub_menu_items">
+
+                    <img class="sub_menu_items_img" src="{% static 'assets/img/consultation.png' %}" alt="">
+                    <strong>consulting</strong>
+                    Guiding businesses toward success through expert insights
+                </a>
+            </p>
+        </div>
+        <a class="nav-links" href="{% url 'about' %}">
+            <span class="styler-bg"></span>About Us
+        </a>
+        <a class="login-btn" href="{% url 'signin' %}">Login | Register</a>
+
+        <div id="myNav" class="overlay">
+
+          <!-- Button to close the overlay navigation -->
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+          <!-- Overlay content -->
+          <div class="overlay-content">
+
+              <a href="{% url 'home' %}">Home</a>
+              
+              <a href="{% url 'about' %}">About Us</a>
+
+              <a class="overlay-solution">Solution +</a>
+              <div class="overlay-sol-menu ">
+                <a href="{% url 'solution1' %}">Order Fulfilment &amp; Inventory Management</a>
+                <a href="{% url 'solution2' %}">Global Product Distribution</a>
+                <a href="{% url 'solution3' %}">Flexible Storage</a>
+                <a href="{% url 'solution4' %}">Consolidation</a>
+                <a href="{% url 'solution5' %}">Consulting</a>
+              </div>
+              
+              <a href="{% url 'register' %}">Register</a>
+              
+              <a href="{% url 'signin' %}">Login</a>
+
+          </div>
+
+      </div>
+              
+      <span class="menu hide" onclick="openNav()">&#9776; </span>
+    </div>
+  </header>
+
+  <div class="service-video">
+    <div class="service-video-close">x</div>
+    <div class="video-card">
+        <div class="ab-img">
+          <iframe src="https://www.youtube.com/embed/Lpp9bHtPAN0">
+          </iframe>
+          <video style="display: none;" controls>
+            <source src="{% static 'assets/videos/thl.mp4' %}" type="video/mp4">
+          Your browser does not support the video tag.
+          </video> 
+        </div>
+    </div>
+  </div> 
+
+    <section class="all-sections hidden">
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slider-text">
+                  <h1>Worldwide Fulfilment<br> made easy.</h1>
+                  <h3>Expand into new markets easily with our fulfilment network</h3>
+                  <a href="{% url 'register' %}">Get Started</a>  
+                </div>
+                <img src="{% static 'assets/img/retail-warehouse-full-of-shelves-with-goods-in-cartons-with-pallets-and-forklifts-logistics-and-tr-593470424.png' %}" alt="">
+                
+                
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-text">
+                    <h1>Integrate Your Store<br></h1>
+                    <h3>Connect with our robust cloud-based 
+                      Order Management System for end-to-end
+                      stock and operations visibility and administration.</h3>
+                    <a href="{% url 'register' %}">Get Started</a>
+                    
+                </div>
+                <img src="{% static 'assets/img/two-men-in-a-warehouse.jpg' %}" alt="">
+               
+                
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-text">
+                    <h1>Fast Delivery<br></h1>
+                    <h3>Take advantage of our lean, efficient and 
+                      accurate order management / delivery process. 
+                      All orders are shipped SAME DAY requests are placed.</h3>
+                    <a href="{% url 'register' %}">Get Started</a>
+                   
+
+                </div>
+                <img src="{% static 'assets/img/logistics-man-smiling.jpg' %}" alt="">
+                
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-text">
+                    <h1>Safety<br></h1>
+                    <h3>Be assured of our  Proper Product Packaging, 
+                      Insurance and Money Back Guarantee</h3>
+                    <a href="{% url 'register' %}">Get Started</a>
+                    
+                </div>
+                <img src="{% static 'assets/img/african-american-logistics-managers-discussing-inventory-management-software-while-checking-goods-stock-laptop-distribution-department-employees-talking-about-supply-chain-storehouse (1) (1).jpg' %}" alt="">
+                
+                
+                
+              </div>
+              
+            </div>
+
+            <div class="track-order-container">
+              <form action="">
+                <div class="track-your-order">
+                  <input type="text" placeholder="Enter your order number">
+                  <button type="submit">Track</button>
+                </div>
+
+
+                
+              </form>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+            <div class="autoplay-progress">
+              <svg viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="20"></circle>
+              </svg>
+              <span></span>
+            </div>
+        </div>
+
+        <section id="homepage-services" class="homepage-services">
+          <h1>How It Works</h1>
+
+          <div class="service-cards">
+            <div>
+              <img class="icon-1" src="{% static 'assets/img/connect.png' %}" alt="">
+              
+              <h1 class="text-wrapper">Connect</h1>
+              <p class="desc-text">
+                Connect your store and send us your inventory
+              </p>
+            </div>
+            
+            <div>
+              <img class="icon-1" src="{% static 'assets/img/management.png' %}" alt="">
+              
+              <h1 class="text-wrapper">Store</h1>
+              <p class="desc-text">
+                Your inventory is categorized and securely stored 
+              </p>
+              
+            </div>
+
+            <div>
+              <img class="icon-1" src="{% static 'assets/img/shipto.png' %}" alt="">
+              
+              <h1 class="text-wrapper">Ship</h1>
+              <p class="desc-text">
+                Once a customer places an order, we Pick, Pack & Ship
+              </p>
+              
+            </div>
+          </div>
+        </section>
+
+        <section id="location" class="location">
+          <div class="location-container">
+            
+            <div class="location-text">
+
+              <div class="child-1">
+                <img class="img-1" src="{% static 'assets/img/globe-surrounded-by-cardboard-boxes-as-image-global-business-logistics_124507-58021.webp' %}" alt="">
+            
+
+              </div>
+
+              
+
+            </div>
+            <div class="location-image">
+              <div class="child-1">
+                <div>
+                    <h1>Welcome To The Hub Terminus Limited</h1>
+                    <h4>
+                        Why Us
+                        <img src="{% static 'assets/img/btn-bg.png' %}">
+                    </h4>
+
+                  
+                </div>
+                <h6>
+
+                  Seamless Fulfilment, Smarter Logistics, Empower Businesses<br>Discover the THL Advantage 
+                </h6>
+                
+                
+              </div>
+              <div class="child-2">
+                <ul class="child-3">
+                  <li>Focus on your revenue drive</li>
+                  <li>Safety: Reduce risk associated with storage, processing, theft etc</li>
+                  <li>Improve your stock control and Inventory Management</li>
+                  <li>Deliver better experience to customers</li>
+                  <li>Seamlessly handle rapidly increasing orders </li>
+                  <li>Optimise your operations with our standardised processes </li>
+                  <li>Flexibility </li>
+                  <li>A full range of packaging options to enhance the unboxing experience </li>
+                  
+                </ul>
+
+                
+
+                <ul class="child-6">
+                  <li>Convenience</li>
+                  <li>No requirement to alter your current e-commerce platform, and no payment for integration </li>
+                  <li>Clean and secure storage and international partnership arrangements</li>
+                  <li>Fast shipping world-wide with track and trace options</li>
+                  <li>Effective, simple and low-cost returns management </li>
+                    <li>No minimum / maximum inventory or order requirements </li>
+                </ul>
+
+
+              </div>
+              <div class=" child-4">
+
+                <a href="{% url 'about' %}" class="btn btn-base">Read More</a>
+
+              </div>
+
+            </div>
+            
+          </div>
+
+
+
+        </section>
+
+
+        <section id="our-country-services" class="our-country-services">
+
+
+          <div class="our-service-cards-container">
+            <div class="our-service-card-header">
+              <div class="child-1">
+                <h4>
+                    Videos
+                    <img src="{% static 'assets/img/btn-bg.png' %}">
+                </h4>
+
+                
+              </div>
+              
+              
+              
+              <p>
+                  At The Hub Terminus Limited (THL), we embark on a mission to 
+                  revolutionize order fulfillment for businesses. Our 
+                  comprehensive and tech-driven solutions are crafted to empower 
+                  businesses of all sizes, providing a seamless pathway to 
+                  growth and success. With a commitment to reliability, 
+                  efficiency, and a customer-centric approach, THL transforms
+                  the logistics landscape.
+              </p>
+            </div>
+
+            <div class="service-cards">
+
+              <div class="child-1">
+
+                <span class="card-image" style="background: rgb(124, 119, 119);">
+                  <img class="video_tag" src="{% static 'assets/img/play-button.png' %}" alt="">
+                  <img class="host-img" style="width: 85%; height: 80%;" data-videoLink="video1-local" src="{% static 'assets/img/thl-home-logo.png' %}" alt="">
+                </span>
+              
+                
+              </div>
+  
+              <div class="child-2">
+
+                <span class="card-image">
+                  <img class="video_tag" src="{% static 'assets/img/play-button.png' %}" alt="">
+                  <img class="host-img" data-videoLink="video2-online" src="{% static 'assets/img/two-men-in-a-warehouse.jpg' %}" alt="">
+                </span>
+              
+                
+              </div>
+  
+              <div class="child-3">
+               
+                <span class="card-image">
+                  <img class="video_tag" src="{% static 'assets/img/play-button.png' %}" alt="">
+                  <img class="host-img" data-videoLink="video3-online" src="{% static 'assets/img/empty-warehouse.jpg' %}" alt="">
+                </span>
+                
+                
+              </div>
+  
+
+              
+            </div>
+
+          </div>
+
+         
+        </section>
+
+        <section id="reach-out" class="reach-out">
+
+          
+          
+            
+          
+          
+          <div class="reach-out-parent">
+            <h4>
+                REACH OUT
+                <img src="{% static 'assets/img/btn-bg.png' %}">
+            </h4>
+
+            <img class="hider-dark"  src="{% static 'assets/img/background-02.jpg' %}" alt="">
+
+            
+
+            <div class="child-2">
+              <div class="sect-1">
+                <h5>Empowering Businesses for Seamless Growth</h5>
+                <h2>We aim to help businesses across the world succeed, grow and expand their operations</h2>
+                <p>
+                  The Hub provides you a variable cost model for your fulfilment, thus eliminating hypothetical fixed costs, reduces risk, faster processes, improves your cash flow and guarantees you retain most of the revenue generated by your business.
+
+                  
+                </p>
+
+                <div class="reach-out-icons">
+                  <span> 
+                    <img src="{% static 'assets/img/package1.png' %}" alt="">Safe package
+                  </span>
+                  <span> 
+                    <img src="{% static 'assets/img/optimal-services.png' %}" alt="">Optimized Operations
+                  </span>
+                  <span> 
+                    <img src="{% static 'assets/img/time-left.png' %}" alt="">Low Cost Shipping
+                  </span>
+                  <span> 
+                    <img src="{% static 'assets/img/customer-care.png' %}" alt="">24/7 Support
+                  </span>
+                </div>
+              </div>
+            
+              <form action="{% url 'home' %}" method="post">
+                {% csrf_token %}
+                <div>
+                  <label for="user_name">Your Name:</label>
+                  <input name="user_name" type="text" required>
+                </div>
+                <div>
+                  <label for="email">Your Email:</label>
+                  <input name="email" type="text" required>
+                </div>
+                <div>
+                  <label for="phone">Your Phone:</label>
+                  <input name="phone" type="text" required>
+                </div>
+                <div>
+                  <label for="cartons">Number of Orders/week</label>
+                  <input name="cartons" type="text" required>
+                  
+                </div>
+                <div class="message">
+                  <label for="message">Message</label>
+
+                  <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+                <div>
+                  <input type="submit" class="reach-out-btn form-btn" value="Send Message">
+                </div>
+              </form>
+            </div>
+
+          </div>
+
+        </section>
+
+        <section id="testimonials" class="testimonials">
+          <div class="testimonials-header">
+            <img class="Quote-icon" src="{% static 'assets/img/quote-icon.png' %}" alt="">
+            <div>
+              <h5>Customer Stories</h5>
+              <h1>At THL we are with you every step of the way</h1>
+            </div>
+          </div>
+          
+          <div class="swiper swiper-testimonial mySwiper-testimonial">
+
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide swiper-slide-testimonial">
+                <!-- <h1>Amazing Delivery!</h1> -->
+                <p>
+                  THL has been an invaluable partner in our growth journey. Their seamless order fulfillment services and commitment to excellence have significantly contributed to the success of our brand. We highly recommend THL for their reliability and customer-centric approach
+                </p>
+                <div class="test-card-footer">
+                  <span>
+                    <img src="{% static 'assets/img/star.png' %}" alt="">
+                    <img src="{% static 'assets/img/star.png' %}" alt="">
+                    <img src="{% static 'assets/img/star.png' %}" alt="">
+                    <img src="{% static 'assets/img/star.png' %}" alt="">
+                    <img src="{% static 'assets/img/star.png' %}" alt="">
+                  </span>
+                  <span>
+                    <h5>
+                      James Balogun<br>
+                      
+                    </h5>
+                    <!-- <img src="{% static 'assets/img/testimage2.png' %}" alt=""> -->
+                  </span>
+                </div>
+              </div>
+
+              <div class="swiper-slide swiper-slide-testimonial">
+                <!-- <h1>Fantastic service!</h1> -->
+                <p>
+                  Working with THL has been a game-changer for us. Their flexible storage solutions and efficient package distribution have allowed us to streamline our operations and reach new markets effortlessly. THL is the partner you need for scalable and reliable logistics
+                </p>
+                <div class="test-card-footer">
+                  <span>
+                    <img src="{% static 'assets/img/star.png' %}" alt="">
+                    <img src="{% static 'assets/img/star.png' %}" alt="">
+                    <img src="{% static 'assets/img/star.png' %}" alt="">
+                    <img src="{% static 'assets/img/star.png' %}" alt="">
+                    <img src="{% static 'assets/img/star.png' %}" alt="">
+                  </span>
+                  <span>
+                    <h5>
+                      Ejike Okafor<br>
+                      
+                    </h5>
+                    <!-- <img src="{% static 'assets/img/testimage1.png' %}" alt=""> -->
+                  </span>
+                </div>
+              </div>
+
+              <div class="swiper-slide swiper-slide-testimonial">
+                <!-- <h1>Awesome People!</h1> -->
+                <p>
+                  THL's consulting services have provided us with strategic insights that have proven instrumental in our business development. Their industry expertise and tailored recommendations have helped us stay ahead in a competitive market
+                </p>
+                <div class="test-card-footer">
+                  <span>
+                    <img src="{% static 'assets/img/star.png' %}" alt="">
+                    <img src="{% static 'assets/img/star.png' %}" alt="">
+                    <img src="{% static 'assets/img/star.png' %}" alt="">
+                    <img src="{% static 'assets/img/star.png' %}" alt="">
+                    <img src="{% static 'assets/img/star.png' %}" alt="">
+                  </span>
+                  <span>
+                    <h5>
+                      Ben Crawford<br>
+                    </h5>
+                    <!-- <img src="{% static 'assets/img/testimage2.png' %}" alt=""> -->
+                  </span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          
+          <div class="swiper-pagination-testimonial"></div>
+
+          
+        </section>
+
+        <section class="faq-section">
+          <h1 class="faq-header">Frequently Asked Questions</h1>
+
+          <div class="faq-groups">
+            <p class="faq-group-item Shipping active-cat">Shipping</p>
+            <p class="faq-group-item Receiving">Receiving</p>
+            <p class="faq-group-item Billing">Billing</p>
+            <p class="faq-group-item Tracking">Tracking</p>
+            <p class="faq-group-item Fulfilment">Fulfilment</p>
+          </div>
+
+          <div style="position: relative;">
+            <div id="Shipping" class="faq-content show active-faq">
+              <div class="faq-question">
+                <input type="checkbox" class="panel">
+                <div class="plus">&#9660;</div>
+                <p class="panel-title">Do you have long term contracts?</p>
+                <div class="panel-content">Our contracts span between 3 months - 5 years</div>
+              </div>
+              
+              <div class="faq-question">
+                <input type="checkbox" class="panel">
+                <div class="plus">&#9660;</div>
+                <p class="panel-title">Do you have set-up fees?</p>
+                <div class="panel-content">No, THL does not charge a set-up fee. There is a refundable prepayment that must be received before our team can start creating your account. The prepayment covers your storage, picking, packaging, and shipping charges, as our service is prepaid.</div>
+              </div>
+              
+              <div class="faq-question">
+                <input type="checkbox" class="panel">
+                <div class="plus">&#9660;</div>
+                <p class="panel-title">What payment methods do you accept?</p>
+                <div class="panel-content">THL accepts credit/debit cards, wire transfers, USSD,POS, and Cheque payments.</div>
+              </div>
+            </div>
+
+            <div id="Receiving" class="faq-content hide">
+              <div class="faq-question">
+                <input type="checkbox" class="panel">
+                <div class="plus">&#9660;</div>
+                <p class="panel-title">How can I ensure that the entire productI sent was received correctly</p>
+                <div class="panel-content">Once your product arrives at our warehouse, it goes through a comprehensive receiving process. The quantities and product information are checked and verified against the provided packing slip. Any discrepancies are promptly reported to your Success Manager who will contact you directly to remedy any order inconsistencies. Product weights are taken and recorded in our system to ensure that the right postage is applied to each of your orders. Each product received is recorded in our receiving logs for quick reference.Once the product is received completely, the product is placed in its designated storage location and the product quantities are added to the THL-OMS dashboard inventory page, which provides real-time inventory management information.</div>
+              </div>
+              
+              <div class="faq-question">
+                <input type="checkbox" class="panel">
+                <div class="plus">&#9660;</div>
+                <p class="panel-title">What are your receiving requirements?</p>
+                <div class="panel-content">Pallets should be sized no larger than 48” x 40” x 48”.Pallets exceeding these measurements will be broken down to the appropriate size, increasing the receiving time. Organize product by lot number, do not mix different products or lots together. Ensure pallets are properly wrapped and banded to safeguard against damage. For non-health and beauty products, please ship in appropriate size boxes. Receiving time and fees will increase if theReceiving Team has to re-box the whole shipment or use our stock boxes to store the product.</div>
+              </div>
+              
+              <div class="faq-question">
+                <input type="checkbox" class="panel">
+                <div class="plus">&#9660;</div>
+                <p class="panel-title">How long does it take to receive a shipment?</p>
+                <div class="panel-content">At THL it takes about 15-30 minutes to receive a single pallet (depending on the package size. Receiving a shipment begins the moment we begin the receiving process to the moment the pallet is placed in its designated storage location.</div>
+              </div>
+
+              <div class="faq-question">
+                <input type="checkbox" class="panel">
+                <div class="plus">&#9660;</div>
+                <p class="panel-title">What needs to be sent with my product?</p>
+                <div class="panel-content">Send a detailed packing slip. Merchant name, product name, quantity, and lot numbers should all be included in the packing slip to make the receiving process run as smoothly as possible. If applicable, state one each box the quantities shipped within that box.</div>
+              </div>
+
+              <div class="faq-question">
+                <input type="checkbox" class="panel">
+                <div class="plus">&#9660;</div>
+                <p class="panel-title">Are my products required to have a barcode/label?</p>
+                <div class="panel-content">Send a detailed packing slip. Merchant name, product name, quantity, and lot numbers should all be included in the packing slip to make the receiving process run as smoothly as possible. If applicable, state one each box the quantities shipped within that box.</div>
+              </div>
+            </div>
+
+            <div id="Billing" class="faq-content hide">
+              <div class="faq-question">
+                <input type="checkbox" class="panel">
+                <div class="plus">&#9660;</div>
+                <p class="panel-title">Do you have long term contracts?</p>
+                <div class="panel-content">Our contracts span between 3 months - 5 years</div>
+              </div>
+              
+              <div class="faq-question">
+                <input type="checkbox" class="panel">
+                <div class="plus">&#9660;</div>
+                <p class="panel-title">Do you have set-up fees?</p>
+                <div class="panel-content">No, THL does not charge a set-up fee. There is a refundable prepayment that must be received before our team can start creating your account. The prepayment covers your storage, picking, packaging, and shipping charges, as our service is prepaid.</div>
+              </div>
+              
+              <div class="faq-question">
+                <input type="checkbox" class="panel">
+                <div class="plus">&#9660;</div>
+                <p class="panel-title">What payment methods do you accept?</p>
+                <div class="panel-content">THL accepts credit/debit cards, wire transfers, USSD,POS, and Cheque payments.</div>
+              </div>
+            </div>
+
+            <div id="Tracking" class="faq-content hide">
+              <div class="faq-question">
+                <input type="checkbox" class="panel">
+                <div class="plus">&#9660;</div>
+                <p class="panel-title">Where can my customers track their orders</p>
+                <div class="panel-content"><a href="www.thehubng.com">www.thehubng.com</a></div>
+              </div>
+
+              <div class="faq-question">
+                <input type="checkbox" class="panel">
+                <div class="plus">&#9660;</div>
+                <p class="panel-title">How long until there is a tracking number for my customer?</p>
+                <div class="panel-content">Once the items are shipped, tracking numbers will be available on the THL-OMS</div>
+              </div>
+
+            </div>
+
+            <div id="Fulfilment" class="faq-content hide">
+              <div class="faq-question">
+                <input type="checkbox" class="panel">
+                <div class="plus">&#9660;</div>
+                <p class="panel-title">What services are included in your fulfilment fees?</p>
+                <div class="panel-content">Our Fulfillment Fee encompasses all of the services that we provide for every order, including; Receiving, storage, pick&Pack, Shipping, returns management (Where necessary)</div>
+              </div>
+
+              <div class="faq-question">
+                <input type="checkbox" class="panel">
+                <div class="plus">&#9660;</div>
+                <p class="panel-title">Kindly explain THL monthly minimum spend?</p>
+                <div class="panel-content">THL total monthly billing includes all fees --- receiving, storage, fulfillment, product picking, packaging and shipping fees.</div>
+              </div>
+              
+            </div>
+          </div>
+
+          
+        </section>
+
+    </section>
+
+    <section id="footer" class="footer">
+          
+          <div class="child-1">
+            <h1>The Hub Terminus Limited</h1>
+            <h4>
+              THL: Where Every Package Tell A<br>Success Story
+          </h4>
+            
+            <p>All rights Reserved © by NeoEffectz</p>
+
+          </div>
+
+          <div class="child-2">
+
+            <div class="other-links">
+              <h1>Other Links</h1>
+              <a class="footer-links">Acceptable Products &amp; Use Policy</a>
+              <a class="footer-links">Privacy Policy</a>
+              <a class="footer-links">Terms &amp; Conditions</a>
+              
+            </div>
+
+            <div class="services">
+
+              <h1>Solutions</h1>
+              <a href="{% url 'solution1' %}">Order Fulfilment</a>
+              <a href="{% url 'solution2' %}">Global Product Distribution</a>
+              <a href="{% url 'solution3' %}">Flexible Storage</a>
+              <a href="{% url 'solution4' %}">Consolidation</a>
+              <a href="{% url 'solution5' %}">Consulting</a>
+
+            </div>
+
+            <div class="customer-care">
+
+              <h1>Customer Care</h1>
+              <a href="{% url 'about' %}">About Us</a>
+              <a href="{% url 'register' %}">Contact Us</a>
+              <a href="{% url 'about' %}">Get Update</a>
+
+            </div>
+
+          </div>
+
+    </section>
+
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const progressCircle = document.querySelector(".autoplay-progress svg");
+        const progressContent = document.querySelector(".autoplay-progress span");
+        var swiper = new Swiper(".mySwiper", {
+          spaceBetween: 30,
+          loop:true,
+          centeredSlides: true,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+          },
+          on: {
+            autoplayTimeLeft(s, time, progress) {
+              progressCircle.style.setProperty("--progress", 1 - progress);
+              progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+            }
+          }
+        });
+    </script>
+    <!-- testimonial slider -->
+    <script>
+      var swiper2 = new Swiper(".mySwiper-testimonial", {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        loop: true,
+        freeMode: true,
+        pagination: {
+          el: ".swiper-pagination-testimonial",
+          clickable: true,
+        },
+      });
+    </script>
+    <script src="{% static 'assets/js/thehub.js' %}"></script>
+</body>
+</html>

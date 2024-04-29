@@ -1,0 +1,634 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <title>The Hub</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/img/thl_logo.png' %}">
+</head>
+<body>
+    
+    <div id="loader-parent" class="loader-parent">
+      <div class="loader"></div>
+      <h4>Welcome</h4>
+    </div>
+
+    <div id="works-parent" class="works-parent">
+        <div id="hiw-close" class="hiw-close">x</div>
+        <section class="homepage-services hiw-services">
+            <h1>How It Works</h1>
+  
+            <div class="service-cards">
+              <div>
+                <img class="icon-1" src="{% static 'assets/img/connect.png' %}" alt="">
+                
+                <h1 class="text-wrapper">Connect</h1>
+                <p class="desc-text">
+                  Connect your store and send us your inventory
+                </p>
+              </div>
+              
+              <div>
+                <img class="icon-1" src="{% static 'assets/img/management.png' %}" alt="">
+                
+                <h1 class="text-wrapper">Store</h1>
+                <p class="desc-text">
+                  Your inventory is categorized and securely stored 
+                </p>
+                
+              </div>
+  
+              <div>
+                <img class="icon-1" src="{% static 'assets/img/shipto.png' %}" alt="">
+                
+                <h1 class="text-wrapper">Ship</h1>
+                <p class="desc-text">
+                  Once a customer places an order, we Pick, Pack & Ship
+                </p>
+                
+              </div>
+            </div>
+        </section>
+    </div>
+    
+    
+
+    <header>
+        <div class="main_nav">
+            <a class="logo" href="{% url 'home' %}">
+              <img src="{% static 'assets/img/the-hub-terminus.png' %}" alt="">
+              <p class="logo-text">
+                Worldwide Fulfilment<br>
+                Made Easy.
+              </p>
+            </a>
+            <a class="nav-links" href="{% url 'home' %}">
+                <span class="styler-bg"></span>
+                Home
+            </a>
+            <a class="nav-links hiw">
+                <span class="styler-bg"></span>
+                How It Works
+            </a>
+            <div class="nav-links">
+                <span class="styler-bg"></span>
+                <span class="nav-links-solution">Solutions <p class="carrat">+</p></span>
+                <img class="menu_triangle" src="{% static 'assets/img/triangle.png' %}" alt="">
+                <p class="sub_menu">
+                    <a href="{% url 'solution1' %}" class="sub_menu_items">
+    
+                        <img class="sub_menu_items_img" src="{% static 'assets/img/inventory-management.png' %}" alt="">
+                        <strong>Order Fulfilment &amp; Inventory Management</strong>
+                        
+                        Effective utilization of modern business operations to drive overall operational efficiency
+    
+                    </a>
+    
+                    <a href="{% url 'solution2' %}" class="sub_menu_items">
+    
+                        <img class="sub_menu_items_img" src="{% static 'assets/img/distribution.png' %}" alt="">
+                        <strong>global product distribution</strong>
+                        Connecting products with people, one doorstep at a time
+                    </a>
+    
+                    <a href="{% url 'solution3' %}" class="sub_menu_items">
+    
+                        <img class="sub_menu_items_img" src="{% static 'assets/img/trolley.png' %}" alt="">
+                        <strong>flexible storage</strong>
+                        Adapting to your needs, one space at a time
+                    </a>
+    
+                    <a href="{% url 'solution4' %}" class="sub_menu_items">
+    
+                        <img class="sub_menu_items_img" src="{% static 'assets/img/consolidate.png' %}" alt="">
+                        <strong>consolidation</strong>
+                        Bringing it all together for greater efficiency.
+                    </a>
+    
+                    <a href="{% url 'solution5' %}" style="border: none;" class="sub_menu_items">
+    
+                        <img class="sub_menu_items_img" src="{% static 'assets/img/consultation.png' %}" alt="">
+                        <strong>consulting</strong>
+                        Guiding businesses toward success through expert insights
+                    </a>
+                </p>
+            </div>
+            <a class="nav-links" href="{% url 'about' %}">
+                <span class="styler-bg"></span>About Us
+            </a>
+            <a class="login-btn" href="{% url 'register' %}">Login | Register</a>
+    
+            <div id="myNav" class="overlay">
+    
+              <!-- Button to close the overlay navigation -->
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    
+              <!-- Overlay content -->
+              <div class="overlay-content">
+    
+                  <a href="{% url 'home' %}">Home</a>
+                  
+                  <a href="{% url 'about' %}">About Us</a>
+    
+                  <a class="overlay-solution">Solution +</a>
+                  <div class="overlay-sol-menu ">
+                    <a href="{% url 'solution1' %}">Order Fulfilment &amp; Inventory Management</a>
+                    <a href="{% url 'solution2' %}">Global Product Distribution</a>
+                    <a href="{% url 'solution3' %}">Flexible Storage</a>
+                    <a href="{% url 'solution4' %}">Consolidation</a>
+                    <a href="{% url 'solution5' %}">Consulting</a>
+                  </div>
+                  
+                  <a href="{% url 'register' %}">Register</a>
+                  
+                  <a href="{% url 'signin' %}">Login</a>
+    
+              </div>
+    
+          </div>
+                  
+          <span class="menu hide" onclick="openNav()">&#9776; </span>
+        </div>
+    </header>
+
+    <div class="founders-about modal-about">
+        <div id="founders-about-close" class="founders-about-close">x</div>
+        <div class="about-card">
+            <div class="ab-img">
+                <img src="{% static 'assets/img/about.png' %}" alt="">
+            </div>
+            <div class="ab-desc">
+                <span class="ceo-name">John Doe</span>
+                <span class="ceo-label">CEO- The Hub </span>
+                <span class="ceo-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, venenatis.</span>
+                <span class="ceo-social-icons">
+                    <img src="{% static 'assets/img/facebook.png' %}" alt="facebook">
+                    <img src="{% static 'assets/img/ig.png' %}" alt="Instagram">
+                    <img src="{% static 'assets/img/linkedIn.png' %}" alt="linkedIn">
+                </span>
+            </div>
+        </div>
+    </div>
+    <section class="about-us hidden">
+        
+        <div class="child-1">
+            <div class="about-us-title">
+                <h1>About Us</h1>
+            </div>
+
+            <div class="company-desc">
+                <!-- <h1>What is The Hub</h1> -->
+                <p>
+                   The Hub Terminus Limited was started to enable Micro Small & Medium Enterprises, independent Business owners, as well as other Brands grow sales, profit and fulfilment proficiency. Coming from years of Managing Transportation, Product Distribution and Fulfilment Services within the Logistics Value Chain, at executive level, we aim to provide seamless Order Fulfilment Solution with low cost and Best-In-Class Service. This is aimed at enhancing the scalability rate of SMEs Pan-Nigeria and globally. We seek to disrupt the logistics space with nimble cloud-based technology that will help our partners rapidly grow sales, optimize operations with ease.
+                    <br><br>
+                    We help e-commerce vendors and Direct To Customer (D2C) brand with fulfilment, while they focus on market expansion. We Receive your stock, store, fulfil and distribute Pan-Nigeria and Internationally. Our 3PL services are bespoke to your business needs, as we understand that every eCommerce business is unique from product Preparation - Delivery; <span>Pay-As-You-Go Storage, Pick, Pack, Label, Delivery and Returns Management.</span> 
+                    <br><br>
+                    Our reliable Fulfilment Services and connected End-End Technology, which powers our fulfilment network, we aim to simplify storage, shorten transit times, cut shipping cost and above all, offer top notch delivery experience to your customers.
+                    <br><br>
+                    Our Fulfilment centre is strategically placed in the heart of Lagos mainland, within close proximity to Distribution Hubs, Vendors, Sea, Air and Land Ports. We are specifically designed for high value, fast-moving consumer goods.
+
+                </p>
+                <div>
+                    <a href="{% url 'home' %}">Explore</a>
+                    <a href="{% url 'register' %}">Get in Touch</a>
+                </div>
+            </div>
+
+            <div class="founders">
+                <h1>Board of Directors</h1>
+                <div class="executives">
+
+                
+                    <div class="flip-card flip-card-bod">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="{% static 'assets/img/about1.png' %}" alt="Avatar">
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="ceo-name">Pastor Ituah Ighodaro</span>
+                                <span class="ceo-label">Non-Executive Director &lbbrk;Chairman&rbbrk;  </span>
+                                <span class="ceo-text">Ituah Ighodalo is a Corporate Business Leader with an extensive track record in building...<p style="color: blue;">Read more</p> </span>
+                                <span class="ceo-social-icons">
+                                    <img src="{% static 'assets/img/facebook.png' %}" alt="facebook">
+                                    <img src="{% static 'assets/img/ig.png' %}" alt="Instagram">
+                                    <img src="{% static 'assets/img/linkedIn.png' %}" alt="linkedIn">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card flip-card-bod">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="{% static 'assets/img/about2.png' %}" alt="Avatar">
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="ceo-name">Victor Ukwat</span>
+                                <span class="ceo-label">Co-Founder | CEO </span>
+                                <span class="ceo-text">Victor Ukwat is a seasoned business manager with an extensive, with an extensive... <p style="color: blue;">Read more</p> </span>
+                                <span class="ceo-social-icons">
+                                    <img src="{% static 'assets/img/facebook.png' %}" alt="facebook">
+                                    <img src="{% static 'assets/img/ig.png' %}" alt="Instagram">
+                                    <img src="{% static 'assets/img/linkedIn.png' %}" alt="linkedIn">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card flip-card-bod">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="{% static 'assets/img/about-us-3.png' %}" alt="Avatar">
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="ceo-name">Jayson Oyarekhua</span>
+                                <span class="ceo-label">Co-Founder | Executuve Director</span>
+                                <span class="ceo-text"> Jayson Oyarekhua is a highly experienced Business Leader with a background... <p style="color: blue;">Read more</p> </span>
+                                <span class="ceo-social-icons">
+                                    <img src="{% static 'assets/img/facebook.png' %}" alt="facebook">
+                                    <img src="{% static 'assets/img/ig.png' %}" alt="Instagram">
+                                    <img src="{% static 'assets/img/linkedIn.png' %}" alt="linkedIn">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card flip-card-bod">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="{% static 'assets/img/about-us-4.0.png' %}" alt="Avatar">
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="ceo-name">Udeme Ufot</span>
+                                <span class="ceo-label">Non-Executive Director </span>
+                                <span class="ceo-text">Udeme Ufot stands as one ofAfrica’s prominent corporate leaders; with about 4 decades... <p style="color: blue;">Read more</p> </span>
+                                <span class="ceo-social-icons">
+                                    <img src="{% static 'assets/img/facebook.png' %}" alt="facebook">
+                                    <img src="{% static 'assets/img/ig.png' %}" alt="Instagram">
+                                    <img src="{% static 'assets/img/linkedIn.png' %}" alt="linkedIn">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card flip-card-bod">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="{% static 'assets/img/aboutus-5.png' %}" alt="Avatar">
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="ceo-name">Dr Jayne Shoboiki</span>
+                                <span class="ceo-label">Non-Executive Director </span>
+                                <span class="ceo-text">Dr. Mrs. Jayne Shoboiki is a seasoned business leader and strategic thinker with over 3 decades... <p style="color: blue;">Read more</p> </span>
+                                <span class="ceo-social-icons">
+                                    <img src="{% static 'assets/img/facebook.png' %}" alt="facebook">
+                                    <img src="{% static 'assets/img/ig.png' %}" alt="Instagram">
+                                    <img src="{% static 'assets/img/linkedIn.png' %}" alt="linkedIn">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- any name change done bellow should be added in founders dict under js  -->
+
+                    <div class="flip-card flip-card-bod">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="{% static 'assets/img/about-us-6.png' %}" alt="Avatar">
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="ceo-name">Olatunji Mayaki</span>
+                                <span class="ceo-label">Non-Executive Director </span>
+                                <span class="ceo-text">Olatunji Mayaki is a highly accomplished professional with extensive experience in commercial law...<p style="color: blue;">Read more</p> </span>
+                                <span class="ceo-social-icons">
+                                    <img src="{% static 'assets/img/facebook.png' %}" alt="facebook">
+                                    <img src="{% static 'assets/img/ig.png' %}" alt="Instagram">
+                                    <img src="{% static 'assets/img/linkedIn.png' %}" alt="linkedIn">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card flip-card-bod">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="{% static 'assets/img/exec-7.png' %}" alt="Avatar">
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="ceo-name">Nuratu Ajoke Jimoh Batagarawa</span>
+                                <span class="ceo-label">Non-Executive Director </span>
+                                <span class="ceo-text">Her expertise and innovative approach left an indelible mark on the organizations she served... <p style="color: blue;">Read more</p> </span>
+                                <span class="ceo-social-icons">
+                                    <img src="{% static 'assets/img/facebook.png' %}" alt="facebook">
+                                    <img src="{% static 'assets/img/ig.png' %}" alt="Instagram">
+                                    <img src="{% static 'assets/img/linkedIn.png' %}" alt="linkedIn">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="flip-card flip-card-bod">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="{% static 'assets/img/about2.jpg" alt="Avatar">
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="ceo-name">James Some</span>
+                                <span class="ceo-label">COO- The Hub </span>
+                                <span class="ceo-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, venenatis. <p style="color: blue;">Read more</p> </span>
+                                <span class="ceo-social-icons">
+                                    <img src="{% static 'assets/img/facebook.png' %}" alt="facebook">
+                                    <img src="{% static 'assets/img/ig.png' %}" alt="Instagram">
+                                    <img src="{% static 'assets/img/linkedIn.png' %}" alt="linkedIn">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card flip-card-bod">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="{% static 'assets/img/about1.jpg" alt="Avatar">
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="ceo-name">Anika Some</span>
+                                <span class="ceo-label">COO- The Hub </span>
+                                <span class="ceo-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, venenatis. <p style="color: blue;">Read more</p> </span>
+                                <span class="ceo-social-icons">
+                                    <img src="{% static 'assets/img/facebook.png' %}" alt="facebook">
+                                    <img src="{% static 'assets/img/ig.png' %}" alt="Instagram">
+                                    <img src="{% static 'assets/img/linkedIn.png' %}" alt="linkedIn">
+                                </span>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- end of row two founders -->
+                </div>
+
+            </div>
+
+            <div class="founders">
+                <h1>Executive Management</h1>
+                <div class="HOD">
+
+                
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="{% static 'assets/img/about2.png' %}" alt="Avatar">
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="ceo-name">Victor Ukwat</span>
+                                <span class="ceo-label">Co-Founder | CEO </span>
+                                <span class="ceo-social-icons">
+                                    <img src="{% static 'assets/img/facebook.png' %}" alt="facebook">
+                                    <img src="{% static 'assets/img/ig.png' %}" alt="Instagram">
+                                    <img src="{% static 'assets/img/linkedIn.png' %}" alt="linkedIn">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="{% static 'assets/img/about-us-3.0.png' %}" alt="Avatar">
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="ceo-name">Jayson Oyarekhua</span>
+                                <span class="ceo-label">Co-Founder | Executuve Director</span>
+                                <span class="ceo-social-icons">
+                                    <img src="{% static 'assets/img/facebook.png' %}" alt="facebook">
+                                    <img src="{% static 'assets/img/ig.png' %}" alt="Instagram">
+                                    <img src="{% static 'assets/img/linkedIn.png' %}" alt="linkedIn">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="{% static 'assets/img/executive-dir-1.png' %}" alt="Avatar">
+                            </div>
+                            <div class="flip-card-back">
+                                
+                                
+                                <span class="ceo-name">Gbenga Akande</span>
+                                <span class="ceo-label">Chief Technology Officer </span>
+                                <span class="ceo-social-icons">
+                                    <img src="{% static 'assets/img/facebook.png' %}" alt="facebook">
+                                    <img src="{% static 'assets/img/ig.png' %}" alt="Instagram">
+                                    <img src="{% static 'assets/img/linkedIn.png' %}" alt="linkedIn">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <!-- any name change done bellow should be added in founders dict under js  -->
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="{% static 'assets/img/exec2.png' %}" alt="Avatar">
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="ceo-name">Cyril Chukwujekwe</span>
+                                <span class="ceo-label">Chief Financial Officer </span>
+                                <span class="ceo-social-icons">
+                                    <img src="{% static 'assets/img/facebook.png' %}" alt="facebook">
+                                    <img src="{% static 'assets/img/ig.png' %}" alt="Instagram">
+                                    <img src="{% static 'assets/img/linkedIn.png' %}" alt="linkedIn">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="{% static 'assets/img/exec1.png' %}" alt="Avatar">
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="ceo-name">Temitope Sanni</span>
+                                <span class="ceo-label">Head, National Sales
+                                </span>
+                                
+                                <span class="ceo-social-icons">
+                                    <img src="{% static 'assets/img/facebook.png' %}" alt="facebook">
+                                    <img src="{% static 'assets/img/ig.png' %}" alt="Instagram">
+                                    <img src="{% static 'assets/img/linkedIn.png' %}" alt="linkedIn">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="{% static 'assets/img/exec-3.jpeg' %}" alt="Avatar">
+                            </div>
+                            <div class="flip-card-back">
+                                <span class="ceo-name">Elizabeth Onwuka</span>
+                                <span class="ceo-label">Head, HR & Admin </span>
+                                <span class="ceo-social-icons">
+                                    <img src="{% static 'assets/img/facebook.png' %}" alt="facebook">
+                                    <img src="{% static 'assets/img/ig.png' %}" alt="Instagram">
+                                    <img src="{% static 'assets/img/linkedIn.png' %}" alt="linkedIn">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                    <!-- end of row two founders -->
+                </div>
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="child-2">
+            <div class="advantages">
+                <!-- <h1>WHY CHOOSE US</h1> -->
+                <h4>
+                    <p>Grow your sales</p>
+                    <p style="color: #ed3337;">Optimize your operations</p>
+                    <p>Delight your customers</p>
+                </h4>
+            </div>
+            <div class="v-text">
+                <div class="vision">
+                    <h1>Vision</h1>
+                    <p>
+                    To be the fulfilment hub of 1st choice in Africa known for service excellence
+                    </p>
+                </div>
+                
+                <div class="mission">
+                    <h1>Mission</h1>
+                    <p>
+                        To delight our partners by continually creating moments of unforgettable/ memorable service experience.
+                        We shall do this by our People, Service ,Technology(PST) Philosophy.
+                    </p>
+                </div>
+
+                <div class="core-values">
+                    <h1>Core Values</h1>
+                    <p>
+
+                        <span>
+                            <img src="{% static 'assets/img/united.png' %}" alt="">
+                            Integrity
+                        </span>
+
+                        <span>
+                            <img src="{% static 'assets/img/Innovation.png' %}" alt="">
+                            Teamwork
+                        </span>
+
+                        <span>
+                            <img src="{% static 'assets/img/Excellence.png' %}" alt="">
+                            Innovation
+                        </span>
+
+                        <span>
+                            <img src="{% static 'assets/img/ethics.png' %}" alt="">
+                            Excellence
+                        </span>
+                    </p>
+                </div>
+
+                
+                
+            </div>
+        </div>
+
+        <div class="philosophy">
+            <h1>
+                Our Philosophy
+                <strong>People. Process. Technology</strong>
+
+            </h1>
+            <div class="philosophy-box">
+                <p>
+                    <strong>People</strong>
+                    At The Hub Terminus Limited, people are our most valuable asset. We encourage a culture of freedom and growth within the company by providing training, mentoring, and career development. We provide a structured, yet fun-filled workplace that embodyies our corporate values of Integrity, Teamwork, Innovation and Excellence.
+
+                    <br><br>
+                    <strong>Process</strong>
+                        A lean, efficient process is KEY to high volume fulfilment. From pickup to delivery, each step in the process ensures accuracy, visibility, effectiveness and a strong quality assurance framework. Continuous improvement is a guiding principle at THL, as we continually improve our processes to deliver unmatched Service Excellence.
+
+                    <br><br>
+                    <strong>Technology</strong>
+                    In a diverse and ever changing world of fulfilment, we believe technology should be at the heart of all we do, ensuring simplicity, transparency and efficiency. Our Order Fulfilment Solution integrates with most e-commerce sales channels and marketplaces. Single and multi-channel e-commerce businesses can leverage on our ready to use dynamic technology.
+                    
+                    
+                </p>
+
+
+            </div>
+            
+        </div>
+
+    </section>
+
+
+    <section id="footer" class="footer">
+          
+          <div class="child-1">
+            <h1>The Hub Terminus Limited</h1>
+            <h4>
+              THL: Where Every Package Tell A<br>Success Story
+          </h4>
+            
+            <p>All rights Reserved © by NeoEffectz</p>
+
+          </div>
+
+          <div class="child-2">
+
+            <div class="other-links">
+                <h1>Other Links</h1>
+                <a class="footer-links">Acceptable Products &amp; Use Policy</a>
+                <a class="footer-links">Privacy Policy</a>
+                <a class="footer-links">Terms &amp; Conditions</a>
+                
+              </div>
+
+            <div class="services">
+
+                <h1>Solutions</h1>
+                <a href="{% url 'solution1' %}">Order Fulfilment</a>
+                <a href="{% url 'solution2' %}">Global Product Distribution</a>
+                <a href="{% url 'solution3' %}">Flexible Storage</a>
+                <a href="{% url 'solution4' %}">Consolidation</a>
+                <a href="{% url 'solution5' %}">Consulting</a>
+  
+              </div>
+
+            <div class="customer-care">
+
+              <h1>Customer Care</h1>
+              <a href="{% url 'about' %}">About Us</a>
+              <a href="{% url 'register' %}">Contact Us</a>
+              <a href="{% url 'about' %}">Get Update</a>
+
+            </div>
+
+          </div>
+
+    </section>
+
+
+    <script src="{% static 'assets/js/thehub.js' %}"></script>
+</body>
+</html>

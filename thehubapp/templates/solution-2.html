@@ -1,0 +1,304 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <title>The Hub</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/img/thl_logo.png' %}">
+</head>
+<body>
+    
+    <div id="loader-parent" class="loader-parent">
+      <div class="loader"></div>
+      <h4>Welcome</h4>
+  </div>
+
+  <div id="works-parent" class="works-parent">
+    <div id="hiw-close" class="hiw-close">x</div>
+    <section class="homepage-services hiw-services">
+        <h1>How It Works</h1>
+
+        <div class="service-cards">
+          <div>
+            <img class="icon-1" src="{% static 'assets/img/connect.png' %}" alt="">
+            
+            <h1 class="text-wrapper">Connect</h1>
+            <p class="desc-text">
+              Connect your store and send us your inventory
+            </p>
+          </div>
+          
+          <div>
+            <img class="icon-1" src="{% static 'assets/img/management.png' %}" alt="">
+            
+            <h1 class="text-wrapper">Store</h1>
+            <p class="desc-text">
+              Your inventory is categorized and securely stored 
+            </p>
+            
+          </div>
+
+          <div>
+            <img class="icon-1" src="{% static 'assets/img/shipto.png' %}" alt="">
+            
+            <h1 class="text-wrapper">Ship</h1>
+            <p class="desc-text">
+              Once a customer places an order, we Pick, Pack & Ship
+            </p>
+            
+          </div>
+        </div>
+    </section>
+</div>
+  
+  <div class="founders-about">
+    <div id="founders-about-close" class="founders-about-close">x</div>
+    <div class="about-card">
+        
+        <div class="ab-desc">
+            <span class="ceo-name">Terms & Conditions</span>
+            <span class="ceo-label">The Hub</span>
+            <span class="ceo-text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, venenatis.</span>
+            
+        </div>
+    </div>
+  </div>
+    
+  <header>
+    <div class="main_nav">
+        <a class="logo" href="{% url 'home' %}">
+          <img src="{% static 'assets/img/the-hub-terminus.png' %}" alt="">
+          <p class="logo-text">
+            Worldwide Fulfilment<br>
+            Made Easy.
+          </p>
+        </a>
+        <a class="nav-links" href="{% url 'home' %}">
+            <span class="styler-bg"></span>
+            Home
+        </a>
+        <a class="nav-links hiw">
+            <span class="styler-bg"></span>
+            How It Works
+        </a>
+        <div class="nav-links">
+            <span class="styler-bg"></span>
+            <span class="nav-links-solution">Solutions <p class="carrat">+</p></span>
+            <img class="menu_triangle" src="{% static 'assets/img/triangle.png' %}" alt="">
+            <p class="sub_menu">
+                <a href="{% url 'solution1' %}" class="sub_menu_items">
+
+                    <img class="sub_menu_items_img" src="{% static 'assets/img/inventory-management.png' %}" alt="">
+                    <strong>Order Fulfilment &amp; Inventory Management</strong>
+                    
+                    Effective utilization of modern business operations to drive overall operational efficiency
+
+                </a>
+
+                <a href="{% url 'solution2' %}" class="sub_menu_items">
+
+                    <img class="sub_menu_items_img" src="{% static 'assets/img/distribution.png' %}" alt="">
+                    <strong>global product distribution</strong>
+                    Connecting products with people, one doorstep at a time
+                </a>
+
+                <a href="{% url 'solution3' %}" class="sub_menu_items">
+
+                    <img class="sub_menu_items_img" src="{% static 'assets/img/trolley.png' %}" alt="">
+                    <strong>flexible storage</strong>
+                    Adapting to your needs, one space at a time
+                </a>
+
+                <a href="{% url 'solution4' %}" class="sub_menu_items">
+
+                    <img class="sub_menu_items_img" src="{% static 'assets/img/consolidate.png' %}" alt="">
+                    <strong>consolidation</strong>
+                    Bringing it all together for greater efficiency.
+                </a>
+
+                <a href="{% url 'solution5' %}" style="border: none;" class="sub_menu_items">
+
+                    <img class="sub_menu_items_img" src="{% static 'assets/img/consultation.png' %}" alt="">
+                    <strong>consulting</strong>
+                    Guiding businesses toward success through expert insights
+                </a>
+            </p>
+        </div>
+        <a class="nav-links" href="{% url 'about' %}">
+            <span class="styler-bg"></span>About Us
+        </a>
+        <a class="login-btn" href="{% url 'register' %}">Login | Register</a>
+
+        <div id="myNav" class="overlay">
+
+          <!-- Button to close the overlay navigation -->
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+          <!-- Overlay content -->
+          <div class="overlay-content">
+
+              <a href="{% url 'home' %}">Home</a>
+              
+              <a href="{% url 'about' %}">About Us</a>
+
+              <a class="overlay-solution">Solution +</a>
+              <div class="overlay-sol-menu ">
+                <a href="{% url 'solution1' %}">Order Fulfilment &amp; Inventory Management</a>
+                <a href="{% url 'solution2' %}">Global Product Distribution</a>
+                <a href="{% url 'solution3' %}">Flexible Storage</a>
+                <a href="{% url 'solution4' %}">Consolidation</a>
+                <a href="{% url 'solution5' %}">Consulting</a>
+              </div>
+              
+              <a href="{% url 'register' %}">Register</a>
+              
+              <a href="{% url 'signin' %}">Login</a>
+
+          </div>
+
+      </div>
+              
+      <span class="menu hide" onclick="openNav()">&#9776; </span>
+    </div>
+  </header>
+    
+    <section class="solutions-page hidden">
+        <div class="child-1 sol2">
+            
+            <div class="sol-text">
+
+                <h1>
+                    Get connected in a few easy steps
+                </h1>
+                <div class="sol-text-link">
+                    <a href="{% url 'about' %}">Learn more</a>
+                    <a href="{% url 'register' %}">Get Started</a>
+                </div>
+            </div>
+            
+        </div>
+        
+        <section id="homepage-services" class="homepage-services">
+
+          <div class="service-cards">
+            <div>
+              <img class="icon-1" src="{% static 'assets/img/expert.png' %}" alt="">
+              
+              <h1 class="text-wrapper">Expertise</h1>
+                
+                <p>Small or large shipments, we handle it all.</p>
+              
+            </div>
+            
+            <div>
+              <img class="icon-1" src="{% static 'assets/img/network.png' %}" alt="">
+              
+              <h1 class="text-wrapper">Network</h1>
+                
+                <p>Reach customers worldwide with our extensive global network.</p>
+              
+              
+            </div>
+
+            <div>
+                <img class="icon-1" src="{% static 'assets/img/reliability.png' %}" alt="">
+              
+                <h1 class="text-wrapper">Reliability</h1>
+                
+                <p>We understand the importance of timely and secure deliveries.</p>
+              
+              
+            </div>
+
+            
+          </div>
+        </section>
+        
+        <section class="profile-text">
+            <h1>Package Distribution Solution</h1>
+            <div>
+                At The Hub Terminus Limited, our Package Distribution solution 
+                is designed to propel your business to new heights by seamlessly 
+                managing the entire distribution process. This service goes beyond
+                borders, catering to both local and global destinations, offering a 
+                comprehensive solution for businesses of all scales.
+                <ul>
+                    <li>
+                        <strong>Global Reach:</strong> 
+                        Reach customers worldwide with our extensive global network. Access new markets, increase customer base, and foster international business growth.
+                    </li>
+                    <li>
+                        <strong>Efficient Logistics:</strong> 
+                        Our logistics framework is finely tuned for efficiency and precision. Reduced transit times, optimized routes, and streamlined processes for cost-effective operations.
+                    </li>
+                    <li>
+                        <strong>Reliable Deliveries:</strong> 
+                        We understand the importance of timely and secure deliveries. Build customer trust with reliable and on-schedule deliveries, leading to enhanced customer satisfaction.
+                    </li>
+                    <li>
+                        <strong>Diverse Handling Capabilities:</strong> 
+                        Small or large shipments, we handle it all. We have the flexibility to cater to a diverse range of businesses and products, ensuring no shipment is too small or too large.
+                    </li>
+                </ul>
+
+
+            </div>
+        </section>
+
+    
+
+    </section>
+
+    <section id="footer" class="footer">
+          
+          <div class="child-1">
+            <h1>The Hub Terminus Limited</h1>
+            <h4>
+              THL: Where Every Package Tell A<br>Success Stories
+          </h4>
+            
+            <p>All rights Reserved © by NeoEffectz</p>
+
+          </div>
+
+          <div class="child-2">
+
+            <div class="other-links">
+              <h1>Other Links</h1>
+              <a class="footer-links">Acceptable Products &amp; Use Policy</a>
+              <a class="footer-links">Privacy Policy</a>
+              <a class="footer-links">Terms &amp; Conditions</a>
+              
+            </div>
+
+            <div class="services">
+
+              <h1>Solutions</h1>
+              <a href="{% url 'solution1' %}">Order Fulfilment</a>
+              <a href="{% url 'solution2' %}">Global Product Distribution</a>
+              <a href="{% url 'solution3' %}">Flexible Storage</a>
+              <a href="{% url 'solution4' %}">Consolidation</a>
+              <a href="{% url 'solution5' %}">Consulting</a>
+
+            </div>
+
+            <div class="customer-care">
+
+              <h1>Customer Care</h1>
+              <a href="{% url 'about' %}">About Us</a>
+              <a href="{% url 'register' %}">Contact Us</a>
+              <a href="{% url 'about' %}">Get Update</a>
+
+            </div>
+
+          </div>
+
+    </section>
+
+
+    <script src="{% static 'assets/js/thehub.js' %}"></script>
+</body>
+</html>
