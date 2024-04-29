@@ -11,6 +11,7 @@ psycopg2 = "*"
 pillow = "*"
 django-simple-captcha = "*"
 django-recaptcha = "*"
+captcha = "*"
 
 [dev-packages]
 

@@ -2,7 +2,7 @@ from django.core.mail import send_mail, BadHeaderError
 from django.conf import settings
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from .forms import ContactForm
+
 
 
 
@@ -51,15 +51,7 @@ def about_us(request):
 
 def solution(request):
 
-    if request.method == 'POST':
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            # If the form is valid, save the form data
-            form.save()
-            # Redirect to a success page or do something else
-            return redirect('home')
-    else:
-        form = ContactForm()
+    
     
     return render(request, 'solution.html')
 
