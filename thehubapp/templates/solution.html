@@ -73,7 +73,7 @@
         <a class="logo" href="{% url 'home' %}">
           <img src="{% static 'assets/img/the-hub-terminus.png' %}" alt="">
           <p class="logo-text">
-            Worldwide Fulfilment<br>
+            Fulfilment<br>
             Made Easy.
           </p>
         </a>
@@ -244,20 +244,7 @@
     
 
     </section>
-    <section>
-      <form method="post">
-          {% csrf_token %}
-          {{ form.as_p }}
-          {% if form.captcha %}
-          <div>
-              <label for="{{ form.captcha.id_for_label }}">Captcha:</label>
-              {{ form.captcha }}
-              {{ form.captcha.errors }}
-          </div>
-          {% endif %}
-          <button type="submit">Submit</button>
-      </form>
-  </section>
+    
   
 
     <section id="footer" class="footer">
