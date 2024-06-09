@@ -210,7 +210,7 @@ body{
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-size: 16px;
-    font-family: Raleway;
+    font-family: Poppins;
     font-weight: 500;
     height: max-content;
     width: max-content;
@@ -4220,7 +4220,8 @@ input::placeholder {
 }
 
 .solutions-page .sol1{
-    background-image: url("../img/WhatsApp Image 2024-05-06 at 15.50.02_2c2d45a4.jpg") !important;
+    background-image: url("../img/inventory.webp") !important;
+    
     
    
    
@@ -4228,8 +4229,8 @@ input::placeholder {
 }
 
 .solutions-page .sol2{
-    background-image: url("../img/atlas-map.jpg") !important;
-    background-size: 100% 60vh;
+    background-image: url("../img/Product Distribution.png") !important;
+    background-size: 98% 60vh;
 
 }
 

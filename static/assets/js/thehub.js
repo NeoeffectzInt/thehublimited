@@ -304,8 +304,8 @@ document.getElementsByClassName("overlay-solution")[0].addEventListener("click",
 
 video_dictionary = {
     "video1":{"local":"videos/thl.mp4"},
-    "video2":{"online":"https://www.youtube.com/embed/oA1VrK0UMJg?rel=0&enablejsapi=1"},
-    "video3":{"online":"https://www.youtube.com/embed/6EDCnhbUpgE?rel=0&enablejsapi=1"},
+    "video2":{"local":"videos/Thl2.mp4"},
+    "video3":{"local":"videos/Thl3.mp4"},
 }
 
 if (window.location.href.split("/")[3] === "" ){
