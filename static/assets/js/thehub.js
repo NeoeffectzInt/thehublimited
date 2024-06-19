@@ -335,7 +335,6 @@ if (window.location.href.split("/")[3] === "" ){
                 video_link.children[1].style.display = "none";
                 video_link.children[0].setAttribute("src", video_data)
             }else if( video_name[1] === "local" ){
-                alert(video_data)
                 video_link.children[0].style.display = "none";
                 video_link.children[1].style.display = "block";
                 let final_src = '/static/assets/' + video_data;
