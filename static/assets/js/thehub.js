@@ -309,7 +309,7 @@ video_dictionary = {
 }
 
 if (window.location.href.split("/")[3] === "" ){
-
+    
     let service_video = document.getElementsByClassName("service-video")[0];
 
     let video_cards = document.getElementsByClassName("card-image");
@@ -335,9 +335,12 @@ if (window.location.href.split("/")[3] === "" ){
                 video_link.children[1].style.display = "none";
                 video_link.children[0].setAttribute("src", video_data)
             }else if( video_name[1] === "local" ){
+                alert(video_data)
                 video_link.children[0].style.display = "none";
                 video_link.children[1].style.display = "block";
-                video_link.children[1].children[0].setAttribute("src", video_data)
+                let final_src = '/static/assets/' + video_data;
+                video_link.children[1].children[0].setAttribute("src", final_src);
+                video_link.children[1].load()
             }
             
 
