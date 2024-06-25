@@ -4177,7 +4177,7 @@ input::placeholder {
     width: 100vw;
     height: max-content;
     margin-bottom: 0;
-    font-family: Poppins;
+    font-family: Raleway;
 }
 
 .solutions-page a{
@@ -4329,6 +4329,7 @@ input::placeholder {
     text-align: left;
     color: #ed3337;
     filter: drop-shadow(0px 0px 40px #ed333799);
+    font-family: Raleway;
 }
 
 .solutions-page .profile-text div{
