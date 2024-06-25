@@ -210,7 +210,7 @@ body{
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-size: 16px;
-    font-family: Raleway;
+    font-family: Poppins;
     font-weight: 500;
     height: max-content;
     width: max-content;
@@ -783,18 +783,40 @@ input::placeholder {
 
 /* section 2 homepage how it works */
 .works-parent{
+    display: grid;
+    justify-content: center;
+    align-items: center;
     width: 100vw;
     height: 0;
     overflow: auto;
     z-index: 1000000;
     position: fixed;
-    background: #d1d1d1;
+    /* background: #d1d1d1; */
     align-content: center;
     transition: .2s;
 }
 
+.works-parent::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffffe4;
+    filter: blur(5px);
+    z-index: -1;
+}
+
 .works-parent .homepage-services{
     transform: translateY(-100vw);
+    width: 90vw;
+    background: rgba(245, 245, 245, 0.821);
+    box-shadow: 0px 0px 20px 5px rgba(63, 61, 86, 0.2);
+    margin: 0 !important;
+    padding-bottom: 50px;
+    border-radius: 10px;
+
 }
 
 .hiw-close{
@@ -970,6 +992,7 @@ input::placeholder {
     display: grid;
     grid-template-columns: auto auto ;
     gap: 40px;
+    padding: 0 40px;
 
   }
 
@@ -1024,6 +1047,7 @@ input::placeholder {
   }
 
   .location-text .child-2 h1 {
+    font-family: Raleway;
     font-size: 64px;
     font-weight: 900;
     color: #ed3337;
@@ -1055,7 +1079,7 @@ input::placeholder {
 
   }.location-image .child-1 h4 {
     border: 2px solid #ed3337;
-    
+    font-family: Raleway;
     font-size: 24px;
     font-weight: 600;
     border-radius: 20px;
@@ -1068,7 +1092,7 @@ input::placeholder {
 }
 
 .location-image .child-1 h1 {
-
+    font-family: Raleway;
     font-weight: 600;
     color: #11101c;
     font-size: 24px;
@@ -1077,10 +1101,10 @@ input::placeholder {
 }
 
 .location-image .child-1 h6 {
-
+    font-family: Raleway;
     margin-top: 10px;
     padding-left: 10px;
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 500;
     line-height: 30px;
     margin-bottom: 20px;
@@ -1164,7 +1188,8 @@ input::placeholder {
     max-width: 350px;
     padding: 0px 0 0 30px;
      margin-block: 10px;
-     font-size: 16.5px;
+     font-size: 14.5px;
+     font-family: Raleway;
 }
 
 .location-image ul {
@@ -1224,6 +1249,7 @@ input::placeholder {
     padding: 0 20px;
     width: 120px;
     height: max-content;
+    font-family: Raleway;
     
 
 }
@@ -1238,6 +1264,7 @@ input::placeholder {
     text-align: center;
     padding: 0 45px 0;
     margin-top: 25px;
+    font-family: Raleway;
     
 }
 
@@ -1250,6 +1277,7 @@ input::placeholder {
     line-height: 20px;
     font-size: 17px;
     height: max-content;
+    font-family: Raleway;
 
 }
 
@@ -1571,7 +1599,7 @@ input::placeholder {
 .reach-out .reach-out-parent h4{
     border: 1px solid #ed3337;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 46px;
     border-radius: 20px;
     color: #ed3337;
@@ -1589,7 +1617,7 @@ input::placeholder {
     color: #FFF;
     text-align: center;
     font-family: Raleway;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 43px; /* 215% */
     letter-spacing: 1.3px;
     border-radius: 7px;
@@ -1619,7 +1647,7 @@ input::placeholder {
     font-family: Raleway;
     font-size: 17px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 20px; /* 83.333% */
     letter-spacing: 1.3px;
    
@@ -1631,7 +1659,7 @@ input::placeholder {
     font-family: Raleway;
     font-size: 17px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 1.3px;
     
 }
@@ -1670,7 +1698,7 @@ input::placeholder {
     font-family: Raleway;
     font-size: 17px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 43px; /* 252.941% */
     letter-spacing: 1.3px;
     border-radius: 7px;
@@ -1725,7 +1753,7 @@ input::placeholder {
     font-family: Raleway;
     font-size: 16px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 20px; /* 111.111% */
     text-transform: capitalize;
 }
@@ -1743,8 +1771,9 @@ input::placeholder {
     grid-column: span 2;
 } 
 
-
-
+.reach-out .reach-out-parent .child-2 form .message{
+    grid-column: span 2;
+}
 
 .reach-out .reach-out-parent .child-2 form input{
     position: relative;
@@ -1758,6 +1787,12 @@ input::placeholder {
     padding-left: 12px;
 }
 
+.reach-out .reach-out-parent .child-2 form .message {
+    grid-column: span 2;
+
+
+}
+
 .reach-out .reach-out-parent .child-2 form textarea{
     position: relative;
     width: 100%;
@@ -1765,7 +1800,6 @@ input::placeholder {
     border: none;
     height: 140px;
     padding: 12px;
-    grid-column: span 2;
     background: transparent;
     border: 1.5px #ffffff solid;
     padding-left: 12px;
@@ -1783,6 +1817,16 @@ input::placeholder {
 
 .reach-out .reach-out-parent .child-2 form .form-btn{
     font-size: 16px;
+    position: relative;
+    width: max-content;
+    outline: none;
+    height: max-content;
+    padding: 14px 26px;
+    background: #ed3337;
+    border: none;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
 }
 
 .reach-out .reach-out-parent .child-2 form .form-btn:hover{
@@ -3393,18 +3437,28 @@ input::placeholder {
     .flip-card-front {
         padding-top: 25px;
     }
+
+    .about-us .child-1 .founders .HOD{
+        grid-template-columns: repeat(auto-fit, minmax(20px, 170px));
+        gap: 8px;
+    }
+    .about-us .child-1 .founders .executives{
+        grid-template-columns: repeat(auto-fit, minmax(20px, 203px));
+    }
+
+    .flip-card {
+        height: 203px;
+    }
+
+    .about-us .child-1 .founders .executives .flip-card {
+        height: 230px;
+    }
 }
 
 
 @media only screen and (max-width: 1340px) {    
-    .about-us .child-1 .founders .executives,
-    .about-us .child-1 .founders .HOD{
-        grid-template-columns: repeat(auto-fit, minmax(20px, 265px));
-    }
-
     
     .flip-card {
-        height: 310px;
         overflow: hidden;
         border-radius: 7px;
     }
@@ -3415,18 +3469,10 @@ input::placeholder {
     .about-us .child-2 .advantages::after{
         left: 40%;
     }
-    
-    .about-us .child-1 .founders .executives,
-    .about-us .child-1 .founders .HOD{
-        grid-template-columns: repeat(auto-fit, minmax(20px, 211px));
-    }
 
-    
-    .flip-card {
-        height: 262px;
+    .about-us .child-1 .founders .HOD .flip-card {
+        height: 190px;
     }
-    
-    
 }
 
 @media only screen and (max-width: 1100px) {    
@@ -3605,6 +3651,16 @@ input::placeholder {
     
     .service-video-close{
         right: 20px;
+    }
+
+    .about-us .child-1 .founders .flip-card {
+        height: 170px !important;
+    }
+
+    .about-us .child-1 .founders .executives,
+    .about-us .child-1 .founders .HOD {
+        grid-template-columns: repeat(auto-fit, minmax(20px, 138px));
+        gap: 10px;
     }
 
 
@@ -4121,7 +4177,7 @@ input::placeholder {
     width: 100vw;
     height: max-content;
     margin-bottom: 0;
-    font-family: Poppins;
+    font-family: Raleway;
 }
 
 .solutions-page a{
@@ -4170,15 +4226,17 @@ input::placeholder {
 }
 
 .solutions-page .sol1{
-    background-image: url("../img/elegant-businessman-checking-tim.jpg") !important;
+    background-image: url("../img/inventory.webp") !important;
     
-    background-position: center;
+    
+   
+   
 
 }
 
 .solutions-page .sol2{
-    background-image: url("../img/atlas-map.jpg") !important;
-    background-size: 100% 60vh;
+    background-image: url("../img/Product Distribution.png") !important;
+    background-size: 98% 60vh;
 
 }
 
@@ -4188,7 +4246,7 @@ input::placeholder {
 }
 
 .solutions-page .sol4{
-    background-image: url("../img/consolidation.jpeg") !important;
+    background-image: url("../img/large-parcel-courier-service-500x500-transformed.webp") !important;
     /* background-size: 50% ; */
     background-size: 100% 80vh;
     
@@ -4271,6 +4329,7 @@ input::placeholder {
     text-align: left;
     color: #ed3337;
     filter: drop-shadow(0px 0px 40px #ed333799);
+    font-family: Raleway;
 }
 
 .solutions-page .profile-text div{

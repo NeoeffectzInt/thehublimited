@@ -36,30 +36,49 @@ function remove_bg(i){
 
 
 // how it works section on other pages
-let hiw_nav = document.getElementsByClassName("hiw")[0]
+let hiw_nav = document.getElementsByClassName("hiw")[0];
 let hiw_parent = document.getElementsByClassName("works-parent")[0]
 let hiw_services = document.getElementsByClassName("hiw-services")[0]
 let hiw_close = document.getElementsByClassName("hiw-close")[0]
 
 
-if (window.location.href.split(".")[1].split("/").includes("about")) {
-   hiw_nav.addEventListener("click", function(){
-       how_modal();
-   })
-}else if (window.location.href.split(".")[1].split("/").includes("login")) {
+if (window.location.href.split("/")[3].includes("about")) {
     hiw_nav.addEventListener("click", function(){
-       how_modal();
-   })
-}else if (window.location.href.split(".")[1].split("/").includes("service")) {
+        how_modal();
+    })
+}else if (window.location.href.split("/")[3].includes("login")) {
     hiw_nav.addEventListener("click", function(){
-       how_modal();
-   })
-}else if (window.location.href.split(".")[1].split("/")[1].split("-").includes("solution")) {
+        how_modal();
+    })
+}else if (window.location.href.split("/")[3].includes("signin")) {
     hiw_nav.addEventListener("click", function(){
-       how_modal();
-   })
+        how_modal();
+    })
+}else if (window.location.href.split("/")[3].includes("register")) {
+    hiw_nav.addEventListener("click", function(){
+        how_modal();
+    })
+}else if (window.location.href.split("/")[3].includes("order-fullfilment")) {
+    hiw_nav.addEventListener("click", function(){
+        how_modal();
+    })
+}else if (window.location.href.split("/")[3].includes("global-product-distribution")) {
+    hiw_nav.addEventListener("click", function(){
+        how_modal();
+    })
+}else if (window.location.href.split("/")[3].includes("flexible-storage")) {
+    hiw_nav.addEventListener("click", function(){
+        how_modal();
+    })
+}else if (window.location.href.split("/")[3].includes("consolidation")) {
+    hiw_nav.addEventListener("click", function(){
+        how_modal();
+    })
+}else if (window.location.href.split("/")[3].includes("consulting")) {
+    hiw_nav.addEventListener("click", function(){
+        how_modal();
+    })
 }
-
 function how_modal(){
     hiw_close.addEventListener("click", function(){
         hiw_services.style.transitionDelay = 0;
@@ -81,7 +100,7 @@ function how_modal(){
 
 // about us card func 
 
-if (window.location.href.split("/").includes("about.html")) {
+if (window.location.href.split("/").includes("about")) {
     
 
 
@@ -213,7 +232,7 @@ if (window.location.href.split("/").includes("about.html")) {
         },
     }
 
-    let flip_cards = document.getElementsByClassName("flip-card");
+    let flip_cards = document.getElementsByClassName("flip-card-bod");
 
     let founders_about = document.getElementsByClassName("founders-about")[0];
     let founders_description = document.getElementsByClassName("ab-desc")[0];
@@ -246,9 +265,7 @@ if (window.location.href.split("/").includes("about.html")) {
             }else if(founders_description.children[2].innerHTML.length > 5){
                 founders_description.style.gridTemplateRows = "max-content max-content 268px max-content";
             }
-            founders_description.previousElementSibling.children[0].setAttribute("src", ceo_data["image"])
-
-            
+            founders_description.previousElementSibling.children[0].setAttribute("src", `/static/assets/${ceo_data["image"]}`)
             about_card.style.transform = "translateY(0)";
 
         })
@@ -287,11 +304,12 @@ document.getElementsByClassName("overlay-solution")[0].addEventListener("click",
 
 video_dictionary = {
     "video1":{"local":"videos/thl.mp4"},
-    "video2":{"online":"https://www.youtube.com/embed/oA1VrK0UMJg?rel=0&enablejsapi=1"},
-    "video3":{"online":"https://www.youtube.com/embed/6EDCnhbUpgE?rel=0&enablejsapi=1"},
+    "video2":{"local":"videos/Thl2.mp4"},
+    "video3":{"local":"videos/Thl3.mp4"},
 }
-if (window.location.href.split("/").includes("home.html") ){
 
+if (window.location.href.split("/")[3] === "" ){
+    
     let service_video = document.getElementsByClassName("service-video")[0];
 
     let video_cards = document.getElementsByClassName("card-image");
@@ -319,7 +337,9 @@ if (window.location.href.split("/").includes("home.html") ){
             }else if( video_name[1] === "local" ){
                 video_link.children[0].style.display = "none";
                 video_link.children[1].style.display = "block";
-                video_link.children[1].children[0].setAttribute("src", video_data)
+                let final_src = '/static/assets/' + video_data;
+                video_link.children[1].children[0].setAttribute("src", final_src);
+                video_link.children[1].load()
             }
             
 
@@ -408,42 +428,41 @@ if (window.location.href.split("/").includes("home.html") ){
     
     // form funtion
     
-    let form_button = document.getElementsByClassName("form-btn")[0];
+    // let form_button = document.getElementsByClassName("form-btn")[0];
     
-    form_button.addEventListener("click", function(e){
-        let client_email = "gbenga.akande@thehubng.com"
-        let user_name = document.getElementsByName("user_name")[0].value;
-        let phone = document.getElementsByName("phone")[0].value;
-        let email = document.getElementsByName("email")[0].value;
-        let cartons = document.getElementsByName("cartons")[0].value;
-        let message = document.getElementsByName("message")[0].value;
+    // form_button.addEventListener("click", function(e){
+    //     let client_email = "gbenga.akande@thehubng.com"
+    //     let user_name = document.getElementsByName("user_name")[0].value;
+    //     let phone = document.getElementsByName("phone")[0].value;
+    //     let email = document.getElementsByName("email")[0].value;
+    //     let cartons = document.getElementsByName("cartons")[0].value;
+    //     let message = document.getElementsByName("message")[0].value;
         
-        form_button.setAttribute("href", `mailto:${client_email}?subject=${cartons}-${email}&body=NAME: ${user_name} %0D%0A%0D%0APHONE: ${phone}%0D%0A%0D%0A${message}`)
-        user_name = "";
-        phone = "";
-        email = "";
-        cartons = "";
-        message = "";
+    //     form_button.setAttribute("href", `mailto:${client_email}?subject=${cartons}-${email}&body=NAME: ${user_name} %0D%0A%0D%0APHONE: ${phone}%0D%0A%0D%0A${message}`)
+    //     user_name = "";
+    //     phone = "";
+    //     email = "";
+    //     cartons = "";
+    //     message = "";
         
         
-    })
+    // })
     
     //how it works code
     let nav_link_works = document.getElementsByClassName("how_works")[0];
     nav_link_works.addEventListener("click", function(e){
         // e.preventDefault;
         let how_section = document.getElementsByClassName("homepage-services")[0];
-        window.scrollTo({top: how_section.scrollHeight + 280, behavior: 'smooth'});
+        window.scrollTo({top: how_section.scrollHeight + 180, behavior: 'smooth'});
     })
     
     
-   
 }
 
  // footer links
 
 footer_dictionary = {
-    "Terms &amp; Conditions":{
+    "Acceptable Products &amp; Use Policy":{
         "date": "29 January, 2024",
         "text": `
             
@@ -655,12 +674,176 @@ If you come across any product that violates our Product Policy and is related t
             To review, update, or delete the data we collect from you, please send a request to info@thehubng.com. We will respond to your request within 30 days in accordance with the applicable laws.
 
 
+            
+
+
+
+
 
             
            
     
             
             
+        `
+    },
+
+    "Terms &amp; Conditions":{
+        "date": "01 April 2022",
+        "text": `
+            
+
+            These terms and conditions outline the rules and regulations for the use of The Hub Terminus Ltd Website, located at https://thehubng.com.
+            
+            <br><br>
+            By accessing this website, you agree to be bound by these terms and conditions. Do not continue to use or access www.thehubng.com if you do not agree to take all of the terms and conditions stated on this page.
+            
+            <br><br>
+            
+            The following terminology applies to these Terms and Conditions, Privacy Statement, Acceptable Products and Use Policy, Disclaimer Notices and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company’s terms and conditions. "thehubng.com”, “THL”, “The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.
+            
+            <br><br><strong>Cookies </strong>
+            
+            We employ the use of cookies. By accessing thehubng.com, you agreed to use cookies in agreement with the The Hub Terminus Ltd’s Privacy Policy.
+            
+            
+            <br><br>
+            Most interactive websites use cookies to let us retrieve the user’s details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.
+            
+            <br><br><strong>License </strong>
+            
+            Unless otherwise stated, The Hub terminus Ltd and/or its licensors own the intellectual property rights for all material on The Hub Terminus Ltd. All intellectual property rights are reserved. You may access this from thehubng.com for your own personal use subjected to restrictions set in these terms and conditions. This Agreement shall begin on the date hereof.
+
+            You must not:
+            <li>
+            Republish material from thehubng.com
+            </li>
+            Sell, rent or sub-license material from thehubng.com
+
+            <li>
+            Reproduce, duplicate or copy material from thehubng.com
+
+            </li>
+            Redistribute content from thehubng.com
+            <li>
+            <br><br>
+            Parts of this website offer educational content that are the opinions of other parties that do not reflect the views and opinions of The Hub Terminus Ltd, its agents and/or affiliates. To the extent permitted by applicable laws, The Hub Terminus Ltd shall not be liable for the content added for educational purposes only or for any liability, damages or expenses caused and/or suffered as a result of any use from 3rd parties content on this website.
+
+            The following organizations may link to our Website without prior written approval:
+
+            </li>
+            Government agencies;
+
+            <li>
+            Search engines;
+            </li>
+            Online directory distributors may link to our Website in the same manner as they hyperlink to the Websites of other listed businesses;
+            <li>
+            ystem wide Accredited Businesses except soliciting non-profit organizations, charity shopping malls, and charity fundraising groups which may not hyperlink to our Web site.
+            These organizations may link to our home page, to publications or to other Website information so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products and/or services; and (c) fits within the context of the linking party’s site.
+            <br><br>
+            We may consider and approve other link requests from the following types of organizations:
+            </li>
+            commonly-known consumer and/or business information sources;
+            <li>
+            dot.com community sites;
+
+            </li>
+            associations or other groups representing charities;
+
+            <li>
+            online directory distributors;
+            </li>
+            internet portals;
+            <li>
+            accounting, law and consulting firms; and
+            </li>
+            <li>
+            educational institutions and trade associations.
+            </li>
+            <br><br>
+            We will approve link requests from these organizations if we decide that: (a) the link would not make us look unfavorably to ourselves or to our accredited businesses; (b) the organization does not have any negative records with us; (c) the benefit to us from the visibility of the hyperlink compensates the absence of The Hub terminus Ltd; and (d) the link is in the context of general resource information.
+
+            <br><br>
+            These organizations may link to our home page so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products or services; and(c) fits within the context of the linking party’s site.
+            If you are one of the organizations listed in paragraph 2 above and are interested in linking to our website, you must inform us by sending an e-mail to info @thehubng.com Please include your name, your organization name, contact information as well as the URL of your site, a list of any URLs from which you intend to link to our Website, and a list of the URLs on our site to which you would like to link. Wait 2-3 weeks for a response.
+            <br><br>
+            Approved organizations may hyperlink to our Website as follows:
+
+            <li>
+            By use of our corporate name; or
+            </li>
+            <li>
+            By use of the uniform resource locator being linked to; or
+            </li>
+            <li>
+            By use of any other description of our Website being linked to that makes sense within the context and format of content on the linking party’s site.
+            </li>
+
+            <li>
+
+            No use of The Hub Terminus Ltd logo or other artwork will be allowed for linking absent a trademark license agreement.
+
+            <li>
+            <br><br><strong>iFrames </strong>
+
+            <br><br>
+
+            Without prior approval and written permission, you may not create frames around our Web pages that alter in any way the visual presentation or appearance of our Website.
+
+            <br><br><strong>Content Liability
+            </strong>
+
+            <br><br>
+
+            We shall not be hold responsible for any content that appears on your Website. You agree to protect and defend us against all claims that is rising on your Website. No link(s) should appear on any Website that may be interpreted as libelous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third-party rights.
+
+            
+            <br><br><strong>Reservation of Rights
+            </strong>
+
+            <br><br>
+
+            We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amen these terms and conditions and it’s linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.
+
+            <br><br><strong>Removal of links from our website
+            </strong>
+
+            <br><br>
+
+            If you find any link on our Website that is offensive for any reason, you are free to contact and inform us any moment. We will consider requests to remove links but we are not obligated to or so or to respond to you directly.
+            We do not ensure that the information on this website is correct, we do not warrant its completeness or accuracy; nor do we promise to ensure that the website remains available or that the material on the website is kept up to date.
+
+            <br><br><strong>Disclaimer
+
+            </strong>
+
+            <br><br>
+
+            To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website. Nothing in this disclaimer will:
+            <li>
+            limit or exclude our or your liability for death or personal injury;
+
+            </li>
+            <li>
+            limit or exclude our or your liability for fraud or fraudulent misrepresentation;
+
+            </li>
+            <li>
+            limit any of our or your liabilities in any way that is not permitted under applicable law; or
+
+
+            </li>
+            <li>
+            exclude any of our or your liabilities that may not be excluded under applicable law.
+
+            </li>
+            
+
+            The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort and for breach of statutory duty.
+            As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature
+
+                    
         `
     }
 }
@@ -674,7 +857,7 @@ let founders_about_close = document.getElementsByClassName("founders-about-close
 
 for (let i = 0; i < footer_links.length; i++) {
     footer_links[i].addEventListener("click", function(){
-        if (window.location.href.split(".")[1].split("/").includes("about")){
+        if (window.location.href.split("/")[3].includes("about")){
             document.getElementsByClassName("ab-img")[0].style.display = "none"
             document.getElementsByClassName("ceo-social-icons")[0].style.display = "none"
         }
@@ -687,7 +870,6 @@ for (let i = 0; i < footer_links.length; i++) {
         // setting card content.....
         let link_name = footer_links[i].innerHTML;
         link_data = footer_dictionary[link_name]
-        console.log(founders_description)
         founders_description.children[0].innerHTML = link_name;
         founders_description.children[1].innerHTML = link_data["date"];
         founders_description.children[2].innerHTML = link_data["text"];
