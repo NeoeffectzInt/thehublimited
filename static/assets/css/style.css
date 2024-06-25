@@ -992,6 +992,7 @@ input::placeholder {
     display: grid;
     grid-template-columns: auto auto ;
     gap: 40px;
+    padding: 0 40px;
 
   }
 
@@ -1046,6 +1047,7 @@ input::placeholder {
   }
 
   .location-text .child-2 h1 {
+    font-family: Raleway;
     font-size: 64px;
     font-weight: 900;
     color: #ed3337;
@@ -1077,7 +1079,7 @@ input::placeholder {
 
   }.location-image .child-1 h4 {
     border: 2px solid #ed3337;
-    
+    font-family: Raleway;
     font-size: 24px;
     font-weight: 600;
     border-radius: 20px;
@@ -1090,7 +1092,7 @@ input::placeholder {
 }
 
 .location-image .child-1 h1 {
-
+    font-family: Raleway;
     font-weight: 600;
     color: #11101c;
     font-size: 24px;
@@ -1099,10 +1101,10 @@ input::placeholder {
 }
 
 .location-image .child-1 h6 {
-
+    font-family: Raleway;
     margin-top: 10px;
     padding-left: 10px;
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 500;
     line-height: 30px;
     margin-bottom: 20px;
@@ -1186,7 +1188,8 @@ input::placeholder {
     max-width: 350px;
     padding: 0px 0 0 30px;
      margin-block: 10px;
-     font-size: 16.5px;
+     font-size: 14.5px;
+     font-family: Raleway;
 }
 
 .location-image ul {
@@ -1246,6 +1249,7 @@ input::placeholder {
     padding: 0 20px;
     width: 120px;
     height: max-content;
+    font-family: Raleway;
     
 
 }
@@ -1260,6 +1264,7 @@ input::placeholder {
     text-align: center;
     padding: 0 45px 0;
     margin-top: 25px;
+    font-family: Raleway;
     
 }
 
@@ -1272,6 +1277,7 @@ input::placeholder {
     line-height: 20px;
     font-size: 17px;
     height: max-content;
+    font-family: Raleway;
 
 }
 
@@ -1593,7 +1599,7 @@ input::placeholder {
 .reach-out .reach-out-parent h4{
     border: 1px solid #ed3337;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 46px;
     border-radius: 20px;
     color: #ed3337;
@@ -1611,7 +1617,7 @@ input::placeholder {
     color: #FFF;
     text-align: center;
     font-family: Raleway;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 43px; /* 215% */
     letter-spacing: 1.3px;
     border-radius: 7px;
@@ -1641,7 +1647,7 @@ input::placeholder {
     font-family: Raleway;
     font-size: 17px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 20px; /* 83.333% */
     letter-spacing: 1.3px;
    
@@ -1653,7 +1659,7 @@ input::placeholder {
     font-family: Raleway;
     font-size: 17px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 1.3px;
     
 }
@@ -1663,7 +1669,7 @@ input::placeholder {
     font-family: Raleway;
     font-size: 17px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 25px; /* 83.333% */
     letter-spacing: 1.3px;
     
@@ -1692,7 +1698,7 @@ input::placeholder {
     font-family: Raleway;
     font-size: 17px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 43px; /* 252.941% */
     letter-spacing: 1.3px;
     border-radius: 7px;
@@ -1747,7 +1753,7 @@ input::placeholder {
     font-family: Raleway;
     font-size: 16px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 20px; /* 111.111% */
     text-transform: capitalize;
 }
